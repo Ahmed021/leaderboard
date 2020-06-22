@@ -1,4 +1,3 @@
-
 //
 'use strict';
 
@@ -15,9 +14,6 @@ const program = (req, res) => {
 
 		res.send(parsedData)
 	});
-
-
-
 }
 
 
