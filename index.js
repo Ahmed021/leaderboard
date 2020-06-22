@@ -1,17 +1,21 @@
 
 //
-'use strict';
+// 'use strict';
 
 const fs = require('fs');
+const program = (req, res) => {
+	fs.readFile('leaderboard.json', (err, data) => {
+		if (err) throw err;
+		let student = JSON.parse(data);
 
-fs.readFile('readFile.json', (err, data) => {
-	if (err) throw err;
-	let student = JSON.parse(data);
+		res.send(student)
+	})
 
-	// sort the file based on points
-	
-	console.log(student);
-})
+}
 
 
-console.log('This is after the read call..');
+
+
+
+
+module.exports = program
