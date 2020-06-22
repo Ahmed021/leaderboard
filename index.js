@@ -4,7 +4,7 @@
 
 const fs = require('fs');
 
-fs.readFile('readFile.json', (err, data) => {
+fs.readFile('leaderboard.json', (err, data) => {
 	if (err) throw err;
 	let parsedData = JSON.parse(data);
 
